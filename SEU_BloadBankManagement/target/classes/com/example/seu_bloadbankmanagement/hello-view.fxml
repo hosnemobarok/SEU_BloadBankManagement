@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.seu_bloadbankmanagement.HelloController">
+   <children>
+      <Label layoutX="95.0" layoutY="36.0" text="Welcome to SEU Blood Bank Application" textFill="#3a13ff">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="120.0" prefHeight="26.0" prefWidth="33.0" text="Name" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="116.0" />
+      <TextField fx:id="nameTextField" layoutX="237.0" layoutY="116.0" prefHeight="26.0" prefWidth="350.0" promptText="Name" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="116.0" />
+      <Label layoutX="140.0" layoutY="130.0" prefHeight="26.0" prefWidth="23.0" text="Age" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0" />
+      <TextField fx:id="ageTextField" layoutX="237.0" layoutY="160.0" prefHeight="26.0" prefWidth="350.0" promptText="12" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="160.0" />
+      <Label layoutX="150.0" layoutY="170.0" prefHeight="26.0" prefWidth="81.0" text="Blood Group" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="200.0" />
+      <ChoiceBox fx:id="bloadGroupChoiceBox" layoutX="237.0" layoutY="201.0" prefHeight="26.0" prefWidth="350.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0" />
+      <Label layoutX="140.0" layoutY="243.0" prefHeight="26.0" prefWidth="59.0" text="Address" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="244.0" />
+      <TextField fx:id="addressTextField" layoutX="237.0" layoutY="244.0" prefHeight="26.0" prefWidth="350.0" promptText="Dhaka, Bangladesh" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="244.0" />
+      <Label layoutX="137.0" layoutY="290.0" prefHeight="26.0" prefWidth="81.0" text="Phone number" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="285.0" />
+      <TextField fx:id="phoneNumberTextField" layoutX="237.0" layoutY="285.0" prefHeight="26.0" prefWidth="350.0" promptText="01788800022" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="285.0" />
+      <Label layoutX="140.0" layoutY="328.0" prefHeight="26.0" prefWidth="81.0" text="Quantity" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="328.0" />
+      <TextField fx:id="quantityTextField" layoutX="237.0" layoutY="328.0" prefHeight="26.0" prefWidth="350.0" promptText="10" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="328.0" />
+      <Button fx:id="submitButton" layoutX="237.0" layoutY="371.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="26.0" prefWidth="119.0" text="ADD" AnchorPane.leftAnchor="120.0" />
+      <TableView fx:id="dataTableView" layoutX="20.0" layoutY="485.0" onMouseClicked="#onTableSelect" prefHeight="241.0" prefWidth="710.0" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="nameTvColumn" prefWidth="149.0" text="Name" />
+            <TableColumn fx:id="ageTvColumn" prefWidth="69.0" text="Age" />
+            <TableColumn fx:id="bloadGroupTvColumn" prefWidth="79.0" text="Bload Group" />
+            <TableColumn fx:id="addressTvColumn" prefWidth="172.0" text="Address" />
+            <TableColumn fx:id="phoneNumberTvColumn" prefWidth="141.0" text="Phone number" />
+            <TableColumn fx:id="quantityTvColumn" minWidth="1.0" prefWidth="99.0" text="Quantity" />
+         </columns>
+      </TableView>
+      <Label fx:id="showMessageLable" layoutX="258.0" layoutY="376.0" textFill="#e800ff" />
+      <ChoiceBox fx:id="searchChoiceBox" layoutX="20.0" layoutY="428.0" prefHeight="26.0" prefWidth="573.0" />
+      <Button layoutX="611.0" layoutY="428.0" mnemonicParsing="false" onAction="#searchButtonAction" prefHeight="26.0" prefWidth="119.0" text="Search" />
+      <Button layoutX="21.0" layoutY="742.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="26.0" prefWidth="710.0" text="DELETE" />
+   </children>
+</AnchorPane>
